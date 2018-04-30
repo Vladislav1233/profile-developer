@@ -1,0 +1,49 @@
+/* 1440 + */
+.b-logo {
+    .font-light;
+    font-size: 28px;
+    line-height: 30px;
+    text-decoration: none;
+    color: @cl-font-white;
+    text-align: center;
+
+    display: block;
+    width: 50px;
+    margin: 0px auto;
+    background-color: @cl-profile-social-profile;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 65px;
+    position: relative;
+    transition: color @animation-time;
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: @cl-profile-navigation-hover;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        border-top: 13px solid transparent;
+        border-left: 49px solid @cl-profile-social-profile;
+        height: 0;
+        position: absolute;
+        right: 0px;
+        top: -13px;
+        width: 1px;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        border-bottom: 13px solid transparent;
+        border-right: 49px solid @cl-profile-social-profile;
+        height: 0;
+        position: absolute;
+        right: 0px;
+        bottom: -13px;
+        width: 1px;
+    }
+
+}

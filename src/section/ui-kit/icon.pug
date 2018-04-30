@@ -1,0 +1,9 @@
+//- ====================
+//- profile-developer: icon
+//- 21-01-2018: VD
+//- --------------------
+//- Блок иконки
+//- ====================
+
+mixin icon(name)
+    +b('i').icon( class!=attributes.class, class=`-icon-${name}` )

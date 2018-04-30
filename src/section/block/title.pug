@@ -1,0 +1,9 @@
+//- ====================
+//- profile-developer: title
+//- 29-04-2018: VD
+//- --------------------
+//- Заголовок
+//- ====================
+
+mixin title(text)
+    +b('h1').title(class!=attributes.class) #{text}

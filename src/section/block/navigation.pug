@@ -1,0 +1,13 @@
+//- ====================
+//- profile-developer: navigation
+//- 21-01-2018: VD
+//- --------------------
+//- Навигация
+//- ====================
+
+mixin navigation(...items)
+    +b('nav').navigation
+        +e('ul').list
+            each item in items
+                +e('li').item
+                    +e('a')(href="javascript:void(0);", title=item).link #{item}

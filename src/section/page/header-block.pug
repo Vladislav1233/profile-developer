@@ -1,0 +1,40 @@
+//- ====================
+//- profile-developer: social-page
+//- 21-01-2018: VD
+//- --------------------
+//- Левая колонка с меню (хедер)
+//- ====================
+
+mixin header-block()
+    
+    +b('header').header
+        include ../block/social-page.pug
+        +social-page({ "items": [{
+                "name": "вконтакте",
+                "nameIcon": "vk-profile",
+                "modifIcon": "--vk"
+            }, {
+                "name": 'фейсбук',
+                "nameIcon": "fb-profile",
+                "modifIcon": "--fb"
+            }, {
+                "name": 'инстаграм',
+                "nameIcon": "instagram-profile",
+                "modifIcon": "--inst"
+            }
+        ]})
+
+        +e.center-wrapper
+            include ../block/logo.pug
+            +logo()
+
+            include ../block/navigation.pug
+            +navigation(
+                "About me",
+                "Services",
+                "Portfolio",
+                "Blog",
+                "Hire me!"
+            )
+
+        +e.footer © 2018 VD. Development by Vladislav Dovzhenko

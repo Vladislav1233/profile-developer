@@ -1,0 +1,11 @@
+//- ====================
+//- RBZ: button block link
+//- 16.01.2018: Amedomary
+//- --------------------
+//- Блочная ссылка
+//- ====================
+
+mixin button(type, content, href)
+    +b(type).button(href=href?href:false title=href?content:false class!=attributes.class)
+        +e('span').text  #{content}
+        block

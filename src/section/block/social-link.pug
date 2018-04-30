@@ -1,0 +1,14 @@
+//- ====================
+//- profile-developer: social-page
+//- 21-01-2018: VD
+//- --------------------
+//- Ссылка на соц. страницу
+//- ====================
+
+
+//- name - название соц сети для title
+//- nameIcon - название иконки для вставки класса из icon fonts
+mixin social-link(name, nameIcon)
+    +b('a').social-link(href="javascript:void(0);", title=name, class!=attributes.class)
+        include ../ui-kit/icon.pug
+        +icon(nameIcon)

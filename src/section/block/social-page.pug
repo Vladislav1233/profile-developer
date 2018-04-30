@@ -1,0 +1,19 @@
+//- ====================
+//- profile-developer: social-page
+//- 21-01-2018: VD
+//- --------------------
+//- Ссылки на соц.страницы
+//- ====================
+
+
+//- data - массив с данными
+//- В массиве data:
+    //- name - название соц сети для title
+    //- nameIcon - название иконки для вставки класса из icon fonts
+    //- modifIcon - модификатор для иконки
+mixin social-page(data)
+    +b('ul').social-page
+        each item in data.items
+            +e('li').item
+                include social-link.pug
+                +social-link(item.name, item.nameIcon)(class=item.modifIcon)

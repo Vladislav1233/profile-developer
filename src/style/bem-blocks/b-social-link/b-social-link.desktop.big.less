@@ -1,0 +1,35 @@
+/* 1440 + */
+.b-social-link {
+    text-decoration: none;
+    color: @cl-profile-social-profile;
+    padding: 5px;
+    display: inline-block;
+    transition: color @animation-time;
+
+    &--vk {
+        font-size: 16px;
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: @cl-profile-vk-hover;
+        }
+    }
+
+    &--inst {
+        font-size: 20px;
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: @cl-profile-inst-hover;
+        }
+    }
+
+    &--fb {
+        font-size: 18px;
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: @cl-profile-fb-hover;
+        }
+    }
+}
