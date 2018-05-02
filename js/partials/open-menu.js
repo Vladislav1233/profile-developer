@@ -1,0 +1,16 @@
+var hamburger = document.getElementsByClassName('js-hamburger')[0];
+
+hamburger.addEventListener('click', function() {
+    // https://developer.mozilla.org/ru/docs/Web/API/Element/classList
+    // toggle ( String [, Boolean])
+    // Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный класс, а если true - добавляет.
+    this.classList.toggle('active');
+    document.getElementsByClassName('js-open-menu')[0].classList.toggle('active');
+});
+
+// вызов ресайза
+window.addEventListener("optimizedResize", function() {
+    document.getElementsByClassName('js-hamburger')[0].classList.toggle('active', false);
+    document.getElementsByClassName('js-open-menu')[0].classList.toggle('active', false);
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJwYXJ0aWFscy9vcGVuLW1lbnUuanMiXSwic291cmNlc0NvbnRlbnQiOlsidmFyIGhhbWJ1cmdlciA9IGRvY3VtZW50LmdldEVsZW1lbnRzQnlDbGFzc05hbWUoJ2pzLWhhbWJ1cmdlcicpWzBdO1xuXG5oYW1idXJnZXIuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbigpIHtcbiAgICAvLyBodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9ydS9kb2NzL1dlYi9BUEkvRWxlbWVudC9jbGFzc0xpc3RcbiAgICAvLyB0b2dnbGUgKCBTdHJpbmcgWywgQm9vbGVhbl0pXG4gICAgLy8g0JXRgdC70Lgg0LrQu9Cw0YHRgSDRgyDRjdC70LXQvNC10L3RgtCwINC+0YLRgdGD0YLRgdGC0LLRg9C10YIgLSDQtNC+0LHQsNCy0LvRj9C10YIsINC40L3QsNGH0LUgLSDRg9Cx0LjRgNCw0LXRgi4g0JrQvtCz0LTQsCDQstGC0L7RgNGL0Lwg0L/QsNGA0LDQvNC10YLRgNC+0Lwg0L/QtdGA0LXQtNCw0L3QviBmYWxzZSAtINGD0LTQsNC70Y/QtdGCINGD0LrQsNC30LDQvdC90YvQuSDQutC70LDRgdGBLCDQsCDQtdGB0LvQuCB0cnVlIC0g0LTQvtCx0LDQstC70Y/QtdGCLlxuICAgIHRoaXMuY2xhc3NMaXN0LnRvZ2dsZSgnYWN0aXZlJyk7XG4gICAgZG9jdW1lbnQuZ2V0RWxlbWVudHNCeUNsYXNzTmFtZSgnanMtb3Blbi1tZW51JylbMF0uY2xhc3NMaXN0LnRvZ2dsZSgnYWN0aXZlJyk7XG59KTtcblxuLy8g0LLRi9C30L7QsiDRgNC10YHQsNC50LfQsFxud2luZG93LmFkZEV2ZW50TGlzdGVuZXIoXCJvcHRpbWl6ZWRSZXNpemVcIiwgZnVuY3Rpb24oKSB7XG4gICAgZG9jdW1lbnQuZ2V0RWxlbWVudHNCeUNsYXNzTmFtZSgnanMtaGFtYnVyZ2VyJylbMF0uY2xhc3NMaXN0LnRvZ2dsZSgnYWN0aXZlJywgZmFsc2UpO1xuICAgIGRvY3VtZW50LmdldEVsZW1lbnRzQnlDbGFzc05hbWUoJ2pzLW9wZW4tbWVudScpWzBdLmNsYXNzTGlzdC50b2dnbGUoJ2FjdGl2ZScsIGZhbHNlKTtcbn0pOyJdLCJmaWxlIjoicGFydGlhbHMvb3Blbi1tZW51LmpzIiwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0=

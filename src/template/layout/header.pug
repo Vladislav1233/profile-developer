@@ -5,4 +5,4 @@
 mixin header()
 
     include ../../section/page/header-block.pug
-    +header-block()
+    +header-block()(class!=attributes.class)

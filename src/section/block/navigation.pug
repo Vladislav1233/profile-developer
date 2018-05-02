@@ -8,6 +8,13 @@
 mixin navigation(...items)
     +b('nav').navigation
         +e('ul').list
-            each item in items
+            - var active
+            each item, index in items
+
+                if (file_name == 'about-me' && index == '0' || file_name == 'services' && index == '1' || file_name == 'portfolio' && index == '2' || file_name == 'blog' && index == '3' || file_name == 'contact' && index == '4')
+                    - var active = '-active'
+                else
+                    - var active = ""
+
                 +e('li').item
-                    +e('a')(href="javascript:void(0);", title=item).link #{item}
+                    +e('a').link(href="javascript:void(0);", title=item, class=active) #{item}

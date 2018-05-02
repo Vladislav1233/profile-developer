@@ -51,9 +51,12 @@ html(lang="en")
 
         +b.page-wrapper
             include layout/header.pug
-            +header()
+            +header()(class=(file_name != 'main' ? '--full' : ''))
 
-            +b('main').main(style='background-image: ' + urlBack, class=(file_name == 'main' ? '-active' : ''))
+            +b('main').main(style=(urlBack ? 'background-image: ' + urlBack : ''), class=(file_name != 'main' ? '--full' : ''), class="js-open-menu")
+                +e.head
+                    include ../section/block/hamburger.pug
+                    +hamburger()
                 block content
 
             //- +footer_main()

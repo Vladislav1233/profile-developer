@@ -7,7 +7,7 @@
 
 mixin header-block()
     
-    +b('header').header
+    +b('header').header(class!=attributes.class)
         include ../block/social-page.pug
         +social-page({ "items": [{
                 "name": "вконтакте",

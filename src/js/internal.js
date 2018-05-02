@@ -1,23 +1,31 @@
-(function($) {
-    /**
-     * глобальные переменные, которые используются многократно
-     */
-    var global = {
-        // время для анимаций
-        animationTime:      200,
-        animationLongTime: 1500,
+(function() {
 
-        // проверка на ios
-        isIos: navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+    function documentReady() {
+        console.log('documentReady');
+
+        // ресайз
+        (function() {
+            var throttle = function(type, name, obj) {
+                obj = obj || window;
+                var running = false;
+                var func = function() {
+                    if (running) { return; }
+                    running = true;
+                     requestAnimationFrame(function() {
+                        obj.dispatchEvent(new CustomEvent(name));
+                        running = false;
+                    });
+                };
+                obj.addEventListener(type, func);
+            };
+
+            /* init - you can init any event */
+            throttle("resize", "optimizedResize");
+        })();
+
+        @@include('partials/open-menu.js')
     };
 
-    $(document).ready(function() {
+    document.addEventListener("DOMContentLoaded", documentReady);
 
-        /**
-        * Подключение js partials
-        * Example: (dog)(dog)include('partials/default.js')
-        */
-    });
-
-
-})(jQuery);
+})();

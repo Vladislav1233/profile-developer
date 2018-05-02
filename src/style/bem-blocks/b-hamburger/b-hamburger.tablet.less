@@ -1,0 +1,20 @@
+/* 768 + */
+.b-hamburger {
+    touch-action: auto;
+    pointer-events: all;
+
+    .no-touch &:hover,
+    .touch &:active {
+        &:before,
+        &:after {
+            background-color: @cl-profile-hover;
+        }
+    }
+
+    .no-touch &:hover &,
+    .touch &:active & {
+        &__hamburger-icon {
+            background-color: @cl-profile-hover;
+        }
+    }
+}

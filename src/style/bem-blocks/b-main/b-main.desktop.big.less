@@ -4,7 +4,7 @@
     vertical-align: top;
     height: 100%;
     width: 50%;
-    background-color: @cl-profile-gray-light;
+    background-color: @cl-profile-back-page;
     padding-left: 30px;
     padding-right: 30px;
     background-repeat: no-repeat;
@@ -12,11 +12,20 @@
     background-position: center center;
 
     &__wrapper-content {
-        height: 100%;
 
         &--main {
             display: flex;
             flex-direction: column;
+            height: 100%;
         }
+
+        &--content-top {
+            padding-top: 35px;
+        }
+    }
+
+    &__head {
+        display: none;
+        padding-top: 13px;
     }
 }

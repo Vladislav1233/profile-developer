@@ -1,15 +1,21 @@
 /* 320 + */
 .b-main {
-    position: relative;
-    z-index: 1;
     display: block;
     width: 100%;
-    box-shadow: -3px 0 10px 0 rgba(0, 0, 0, 0.1), -4px 0 4px 0 rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s;
     padding-left: 15px;
     padding-right: 15px;
 
     &.active {
         transform: translateX( calc(~"100% - 50px") );
+    }
+
+    &__head {
+        display: flex;
+    }
+
+    &__wrapper-content {
+        &--main {
+            height: calc(~'100% - 57px');
+        }
     }
 }

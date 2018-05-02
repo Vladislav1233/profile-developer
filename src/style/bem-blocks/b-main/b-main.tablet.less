@@ -2,4 +2,48 @@
 .b-main {
     padding-left: 25px;
     padding-right: 25px;
+    position: relative;
+    z-index: 1;
+    box-shadow: -3px 0 10px 0 rgba(0, 0, 0, 0.1), -4px 0 4px 0 rgba(0, 0, 0, 0.05);
+    transition: transform @animation-time;
+
+    &.active {
+        touch-action: none;
+        pointer-events: none;
+    }
+
+    &--full {
+        width: 100%;
+
+        &.active {
+            transform: translateX( calc(~"100% - 65px") );
+        }
+    }
+
+    &--full &__head {
+        display: flex;
+    }
+
+    &.active & {
+        &__wrapper-content {
+            filter: blur(2px);
+        }
+    }
+
+    &__head {
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        height: 45px;
+        overflow: hidden;
+        margin-bottom: 12px;
+    }
+
+    &__wrapper-content {
+        // transition: filter @animation-time;
+
+        &--content-top {
+            padding-top: 0px;
+        }
+    }
 }
