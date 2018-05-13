@@ -11,7 +11,13 @@
     justify-content: space-between;
     padding-top: 15px;
     padding-bottom: 15px;
-    overflow-y: auto;
+    // overflow-y: auto;
+    overflow: hidden;
+    position: relative;
+
+    .touchevents & {
+        overflow: auto;   
+    }
 
     &__center-wrapper {
         margin-bottom: 36px;

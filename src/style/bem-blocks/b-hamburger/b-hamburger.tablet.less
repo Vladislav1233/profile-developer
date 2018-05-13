@@ -3,16 +3,16 @@
     touch-action: auto;
     pointer-events: all;
 
-    .no-touch &:hover,
-    .touch &:active {
+    .no-touchevents &:hover,
+    .touchevents &:active {
         &:before,
         &:after {
             background-color: @cl-profile-hover;
         }
     }
 
-    .no-touch &:hover &,
-    .touch &:active & {
+    .no-touchevents &:hover &,
+    .touchevents &:active & {
         &__hamburger-icon {
             background-color: @cl-profile-hover;
         }

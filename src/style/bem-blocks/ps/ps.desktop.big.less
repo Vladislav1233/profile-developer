@@ -1,0 +1,38 @@
+/* 1440 + */
+.ps {
+
+    &:hover & {
+        &__thumb-y {
+            opacity: 0.6;
+        }
+    }
+
+    &__rail-x {
+        display: none;
+    }
+
+    &__rail-y {
+        position: absolute;
+        left: auto !important;
+        right: 0px;
+        width: 10px;
+        height: 100% !important;
+        background-color: transparent;
+    }
+
+    &__thumb-y {
+        position: absolute;
+        width: 6px;
+        right: 4px;
+        background-color: @cl-profile-background-header;
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity @animation-time;
+    }
+
+    .b-header & {
+        &__thumb-y {
+            background-color: @cl-profile-back-page;
+        } 
+    }
+}

@@ -51,9 +51,9 @@ html(lang="en")
 
         +b.page-wrapper
             include layout/header.pug
-            +header()(class=(file_name != 'main' ? '--full' : ''))
+            +header()(class=(file_name != 'main' ? '--full' : '') + ' js-header-scroll')
 
-            +b('main').main(style=(urlBack ? 'background-image: ' + urlBack : ''), class=(file_name != 'main' ? '--full' : ''), class="js-open-menu")
+            +b('main').main(style=(urlBack ? 'background-image: ' + urlBack : ''), class=(file_name != 'main' ? '--full' : ''), class="js-open-menu js-page-scroll")
                 +e.head
                     include ../section/block/hamburger.pug
                     +hamburger()

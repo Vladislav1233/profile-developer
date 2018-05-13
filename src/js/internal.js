@@ -24,6 +24,7 @@
         })();
 
         @@include('partials/open-menu.js')
+        @@include('partials/page-scroll.js')
     };
 
     document.addEventListener("DOMContentLoaded", documentReady);
